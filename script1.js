@@ -10,11 +10,14 @@ btn1.addEventListener("click", function (event) {
       // console.log(TVShow)
       for(let i = 0;i<data.length;i++){ 
         let TVShow = data[i].show;
+        console.log( TVShow)
         let result = `<div class ="Main_Show">
-            <h2 class="Show_Name"> Show Name :-${TVShow.name}</h2>
             <img src="${TVShow.image.medium}" class="image" alt="image" > 
-     <p class="Premiered"> <span> Premiered:-</span>${TVShow.schedule.time} ${TVShow.schedule.days}</p>
+            <h3 class="Status"> Status :-${TVShow.status}</h3> 
+     <p class="genres"> <span> Genres:-</span>${TVShow.genres} </p>
      <p class="Language"><span> Language:-</span>${TVShow.language}</p>
+     <p class="summary"><span>summary :-</span>${TVShow.summary}</p>
+     <p class=" Seasons"><span>Seasons :-</span>${TVShow.season}</p>
      <span class="De">Details:-</span><a href="Detail.html" class=" Details">Show Details</a>
             </div> `;
         container.innerHTML += result; 

@@ -1,0 +1,138 @@
+*{
+    paddin:0;
+    margin: 0;
+}
+.main{
+    display: flex;
+    text-align: center;
+     justify-content: center;  
+    flex-direction: column;
+    padding-top: 10px;
+    margin-left: 5px;
+    
+    
+}
+
+ .search {
+    border: 3px solid green;
+    border-radius: 10px;
+    background-color: rgb(232, 232, 243);
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
+ }
+ .submitButton{
+    border-radius: 10px;
+    border: 3px solid black;
+    font-size: larger;
+    font-weight: bold;
+ }
+ .submitButton:hover{
+    background-color: blue;
+    color: rgb(222, 222, 236);
+    transition: .5s;
+ }
+ h1{
+    text-align: center;
+    color: red;
+    border: 2px solid rgb(0, 255, 76);
+    border-radius: 15px;
+    background-color: rgb(81, 21, 220); 
+ }
+
+ /* h2{
+    text-align: center;
+    border: 2px solid blue;
+    border-radius: 10px;
+ } */
+ h4{
+    text-align: start;
+    border: 2px solid rgb(255, 0, 4);
+    border-radius: 10px;
+    /* height: 25%; */
+    width: 15%;
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+    background-color: blueviolet;
+ }
+
+ /* .Show_Name{
+   display: flex;
+border: 2px solid green;
+border-radius: 10px;
+height: fit-content;
+width: fit-content;
+text-align: center;
+flex-direction: column;
+justify-items: center;
+ } */
+ h2{
+   text-align: center;
+   border: 2px solid green;
+border-radius: 10px;
+padding-top: 10px;
+padding-bottom: 10px;
+margin-bottom: 10px;
+margin-left: 10px;
+margin-right: 10px;
+/* height: fit-content;
+width: fit-content; */
+ }
+
+.image{
+border: 2px solid blue;
+margin-left: 10px;
+margin-right: 10px;
+}
+.Premiered{
+font-size: larger;
+font-weight: bold;
+
+}
+.Language{
+   font-size: larger;
+   font-weight: bold;
+   
+}
+.Details{
+   font-size: larger;
+   font-weight: bold;
+   background-color: rgb(212, 255, 0);
+   border-radius: 10px;
+   color: black;
+   
+}
+.De{
+   color: black;
+   font-weight: bold;
+}
+.Details:hover{
+   background-color: blue;
+   color: beige;
+   transition: .5s;
+}
+
+.Main_Show{
+border: 3px solid red;
+border-radius: 10px;
+height: fit-content;
+width: fit-content;
+padding-top: 10px;
+padding-bottom: 10px;
+margin-bottom: 10px;
+margin-bottom: 10px;
+margin: 10px;
+}
+
+.container{
+   display: flex;
+   /* flex-direction: column;
+   display: inline-flex; */
+   height: 100%;
+   width: 100%;
+   /* display: inline-flexbox; */
+   padding-top: 10px;
+/* display: inline-block;  */
+flex-wrap: wrap;
+}
