@@ -15,7 +15,7 @@ btn1.addEventListener("click", function (event) {
             <img src="${TVShow.image.medium}" class="image" alt="image" > 
      <p class="Premiered"> <span> Premiered:-</span>${TVShow.schedule.time} ${TVShow.schedule.days}</p>
      <p class="Language"><span> Language:-</span>${TVShow.language}</p>
-     <span class="De">Details:-</span><a href="Detail.html" class=" Details">Show Details</a>
+     <span class="De">Details:-</span><a href="Details.html" class=" Details">Show Details</a>
             </div> `;
         container.innerHTML += result; 
       };

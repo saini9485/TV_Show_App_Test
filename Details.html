@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Show app</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="header1"><h1><a href="index.html"> TV SHOW SEARCH</a></h1></div>
+
+    <div class="container1"></div>
+  
+    <h2 class="Seasons"=>Seasons</h2>
+    <div class="container2"></div>
+    <h2 class="Cast">Cast</h2>
+    <div class="container3"></div>
+    <script >
+        let tranferData = JSON.parse(sessionStorage.getItem("transferdata")) 
+        //console.log(tranferData) =>  String to object 
+     
+const container1 = document.querySelector(".container1");
+fetch(`https://api.tvmaze.com/shows/${tranferData.show.id}`)
+    .then((response) => response.json())
+    .then((data) => {
+        // console.log(data)
+    //   for (let i = 0; i < data.length; i++) {
+        html = `<div class="main">
+            <div>
+    <img src="${data.image.medium}" /></div>
+    <div class="right">
+    <h1>${data.name}</h1>
+    <h4>Genres:${data.genres[0]}</h4>
+    <h4>Language:${data.language}</h4> 
+    <h4>Staus:${data.status}</h4> 
+    </div>
+     </div>`;
+        container1.innerHTML += html;
+       
+      
+    });
+    const container2 = document.querySelector(".container2");
+  fetch(`https://api.tvmaze.com/shows/${tranferData.show.id}/seasons`)
+    .then((response) => response.json())
+    .then((data) => {
+    //   console.log(data)
+      for (let i = 0; i < data.length; i++) {
+        if(data[i].summary==null){
+            data[i].summary="No summary"
+        }
+        html = `<div class="main">
+    
+    <h3>season:${data[i].number}</h3>
+    <img src="${data[i].image.medium}" alt="">
+    <p>${data[i].summary}</p>
+
+
+     </div>`;
+        container2.innerHTML += html;
+       
+      }
+    });
+    const container3 = document.querySelector(".container3");
+    fetch(` https://api.tvmaze.com/shows/${tranferData.show.id}/cast`)
+    .then((response) => response.json())
+    .then((data) => {
+    //   console.log(data)
+      for (let i = 0; i < data.length; i++) {
+        html = `<div class="main">
+    <img src="${data[i].person.image.medium}" alt="">
+    <h3>Name:${data[i].person.name}</h3>
+    <h3>Character Name:${data[i].character.name}</h3>
+   
+     </div>`;
+        container3.innerHTML += html;
+       
+      }
+    });
+
+    </script>
+</body>
+</html>
